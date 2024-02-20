@@ -1,0 +1,12 @@
+name = "StochasticDCF"
+uuid = "99d3b20c-44be-4410-b145-f748db8e568f"
+authors = ["Antonello Lobianco <antonello@lobianco.org>"]
+version = "0.0.1"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+
+[compat] 
+Distributions = "0.25"
+Julia = "1.6" 
+
