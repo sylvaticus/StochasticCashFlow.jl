@@ -1,4 +1,4 @@
-module StochasticDCF
+module StochasticCashFlow
 export compute_irr
 
 using Dates
@@ -85,4 +85,4 @@ function compute_irr(times,values;epsilon=0.01,r_start=0.05, deltar_start = 0.02
 end
 
 
-end # module StochasticDCF
+end # module StochasticCashFlow
