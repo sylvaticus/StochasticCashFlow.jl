@@ -1,14 +1,25 @@
 module StochasticCashFlow
-export compute_irr
+export StateV, CFRecord, CF
 
-using Dates
+abstract type StateV end
+abstract type CFRecord end
 
+
+@kwdef mutable struct CF
+    nperiods::Int64  = 1000
+    iterations::Int64 = 100
+    states_defs::Vector{StateV}
+    cfitems_defs::Vector{CFRecord}
+    users_names::Vector{Symbol} = Symbol[]
+    states_instances::Dictionary{Symbol,Array{Float64,2}}
+    cfitems_instances::Dictionary{(Symbol,Symbol),Array{Float64}}
+end
 
 greet() = print("Hello World!")
 
 
 
-
+#=
 mutable struct CFRecord
     time
     amount
@@ -17,15 +28,17 @@ mutable struct CFRecord
     notes
     df
 end
+=#
 
 
+#=
 mutable struct CF
     records
     def_uncert
     #def_df #function
 
 end
-
+=#
 
 
 
